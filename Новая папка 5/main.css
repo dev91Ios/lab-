@@ -1,0 +1,113 @@
+
+@keyframes triangle-color-change {
+  0% { border-bottom-color: pink; }
+  100% { border-bottom-color: red; }
+}
+
+.triangle-color-change {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid pink;
+  animation: triangle-color-change 3s infinite alternate;
+}
+
+/* 2. Animation: the blue triangle jumped and changed color to blue */
+@keyframes jumping-triangle {
+  0% { transform: translateY(0); border-bottom-color: lightblue; }
+  50% { transform: translateY(-100px); border-bottom-color: blue; }
+  100% { transform: translateY(0); border-bottom-color: lightblue; }
+}
+
+.jumping-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid lightblue;
+  animation: jumping-triangle 3s infinite;
+}
+
+/* 3. Animation: pink triangle running */
+@keyframes running-triangle {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100vw); }
+}
+
+.running-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid pink;
+  animation: running-triangle 5s infinite linear;
+}
+
+/* 4. Animation: the triangle runs and changes all the colors of the rainbow */
+@keyframes rainbow-triangle {
+  0% { border-bottom-color: red; }
+  16.67% { border-bottom-color: orange; }
+  33.33% { border-bottom-color: yellow; }
+  50% { border-bottom-color: green; }
+  66.67% { border-bottom-color: blue; }
+  83.33% { border-bottom-color: indigo; }
+  100% { border-bottom-color: violet; }
+}
+
+.rainbow-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  animation: rainbow-triangle 5s infinite linear;
+}
+
+/* 5. Animation: triangle spins */
+@keyframes spinning-triangle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinning-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid lightgreen;
+  animation: spinning-triangle 3s infinite linear;
+}
+
+/* 6. Animation: the triangle spins and changes colors */
+@keyframes spinning-color-change-triangle {
+  0% { border-bottom-color: pink; transform: rotate(0deg); }
+  100% { border-bottom-color: purple; transform: rotate(360deg); }
+}
+
+.spinning-color-change-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid pink;
+  animation: spinning-color-change-triangle 3s infinite linear;
+}
+
+/* 7. Animation: a triangle turns into an oval */
+@keyframes triangle-to-oval {
+  0% { border-bottom-left-radius: 0%; border-bottom-right-radius: 0%; }
+  100% { border-bottom-left-radius: 50%; border-bottom-right-radius: 50%; }
+}
+
+.triangle-to-oval {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  animation: triangle-to-oval 3s infinite alternate;
+}
+
+/* 8. Animation: triangle turns into circle */
+@keyframes triangle-to-circle 
+  {0%  clip-path}

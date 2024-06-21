@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<style>
+
+
+/* 1. Animation: circle changes color from pink to red */
+@keyframes circle-color-change {
+    0% { background-color: pink; }
+    100% { background-color: red; }
+  }
+  
+  .circle-color-change {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    animation: circle-color-change 3s infinite alternate;
+  }
+  
+  /* 2. Animation: the blue circle jumped and changed color to blue */
+  @keyframes jumping-circle {
+    0% { transform: translateY(0); background-color: lightblue; }
+    50% { transform: translateY(-100px); background-color: blue; }
+    100% { transform: translateY(0); background-color: lightblue; }
+  }
+  
+  .jumping-circle {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border-radius: 50%;
+    animation: jumping-circle 3s infinite;
+  }
+  
+  /* 3. Animation: pink cube running */
+  @keyframes running-cube {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100vw); }
+  }
+  
+  .running-cube {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    animation: running-cube 5s infinite linear;
+  }
+  
+  /* 4. Animation: the cube runs and changes all the colors of the rainbow */
+  @keyframes rainbow-cube {
+    0% { background-color: red; }
+    16.67% { background-color: orange; }
+    33.33% { background-color: yellow; }
+    50% { background-color: green; }
+    66.67% { background-color: blue; }
+    83.33% { background-color: indigo; }
+    100% { background-color: violet; }
+  }
+  
+  .rainbow-cube {
+    width: 100px;
+    height: 100px;
+    animation: rainbow-cube 5s infinite linear;
+  }
+  
+  /* 5. Animation: circle spins */
+  @keyframes spinning-circle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .spinning-circle {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    animation: spinning-circle 3s infinite linear;
+  }
+  
+  /* 6. Animation: the circle spins and changes colors */
+  @keyframes spinning-color-change {
+    0% { background-color: pink; transform: rotate(0deg); }
+    100% { background-color: purple; transform: rotate(360deg); }
+  }
+  
+  .spinning-color-change {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    animation: spinning-color-change 3s infinite linear;
+  }
+  
+  /* 7. Animation: a circle turns into an oval */
+  @keyframes circle-to-oval {
+    0% { border-radius: 50%; }
+    100% { border-radius: 30% 70% 30% 70% / 30% 70% 30% 70%; }
+  }
+  
+  .circle-to-oval {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: circle-to-oval 3s infinite alternate;
+  }
+  
+  /* 8. Animation: a circle turns into a triangle */
+  @keyframes circle-to-triangle {
+    0% { border-radius: 50%; }
+    100% { border-radius: 50% 50% 0 0; }
+  }
+  
+  .circle-to-triangle {
+    width: 100px;
+    height: 100px;
+    background-color: lightyellow;
+    animation: circle-to-triangle 3s infinite alternate;
+  }
+  
+  /* 9. Animation: circle turns into square */
+  @keyframes circle-to-square {
+    0% { border-radius: 50%; }
+    100% { border-radius: 0; }
+  }
+  
+  .circle-to-square {
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+    animation: circle-to-square 3s infinite alternate;
+  }
+  
+  /* 10. Animation: pink cube stretches and turns red */
+  @keyframes cube-stretch {
+    0% { transform: scale(1); background-color: pink; }
+    100% { transform: scale(2, 0.5); background-color: red; }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+  <div class="circle-color-change"></div>
+  <div class="jumping-circle"></div>
+  <div class="running-cube"></div>
+  <div class="rainbow-cube"></div>
+  <div class="spinning-circle"></div>
+  <div class="spinning-color-change"></div>
+  <div class="circle-to-oval"></div>
+  <div class="circle-to-triangle"></div>
+  <div class="circle-to-square"></div>
+  <div class="cube-stretch"></div>
+</body>
+</html>
